@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #fafaf9;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.search-input{
+    @apply border border-[#E3350D] rounded w-3/4 md:w-72 ml-2 mr-1 md:mx-2 px-1 text-xl
+}
+.search-btn{
+    @apply border border-[#E3350D] text-[#E3350D] text-xs md:text-base rounded hover:text-white hover:bg-[#E3350D] duration-300 px-1 md:px-2 py-3
+}
+
+.suggestion-list{
+    @apply h-fit flex flex-col bg-white m-1 w-3/4 md:w-72 mt-2 shadow-2xl
+}
+
+/* pokemon cards */
+.img-container{
+    @apply rounded-xl bg-slate-300 cursor-pointer
+}
+
+/* pokemon details  */
+.detail-hover{
+    @apply hover:shadow-lg
+}
+
+/* bar chart */
+.chart-container{
+    position: relative;
+}
+@media screen and (min-width: 400px){
+    .chart-container{
+        height: 270px;
+    }
 }
